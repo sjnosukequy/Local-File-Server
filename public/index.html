@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0" />
+    <title>Chunked Upload</title>
+
+    <!-- Tailwind + DaisyUI (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-base-200 text-base-content min-h-screen flex items-center justify-center p-6">
+    <div class="w-full lg:w-1/2 bg-base-100 shadow-xl rounded-lg p-8 space-y-6">
+      <h2 class="text-2xl font-bold text-center text-primary">Upload File</h2>
+
+      <!-- File input (kept id & multiple intact) -->
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend">Select files</legend>
+        <input
+          type="file"
+          id="file"
+          multiple
+          class="file-input w-full" />
+      </fieldset>
+
+      <!-- Optimize toggle (default OFF) -->
+      <div class="form-control w-full flex flex-col gap-2 md:flex-row md:items-center">
+        <label class="label cursor-pointer justify-between w-full">
+          <p style="white-space: normal !important;">
+            <span class="label-text font-medium word-break">Optimize images</span>
+            <span class="label-text-alt opacity-70 word-break">Reduce size (webp format)</span>
+          </p>
+          <!-- default unchecked = no -->
+          <input
+            id="optimizeImages"
+            type="checkbox"
+            class="toggle toggle-primary" />
+        </label>
+      </div>
+
+      <!-- Upload button -->
+      <button
+        id="uploadBtn"
+        class="btn btn-secondary btn-block">
+        Upload
+      </button>
+
+      <!-- Status message -->
+      <p
+        id="status"
+        class="text-center text-sm text-info"></p>
+    </div>
+
+    <script
+      src="/upload.js"
+      defer></script>
+  </body>
+</html>
