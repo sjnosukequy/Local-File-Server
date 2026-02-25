@@ -36,4 +36,5 @@ A lightweight local file server that lets you transfer files easily, optimize im
 git clone <your-repo-url>
 cd <project-folder>
 npm install
+node app.js
 ```

@@ -32,7 +32,7 @@
       <!-- Optimize toggle (default OFF) -->
       <div class="form-control w-full flex flex-col gap-2 md:flex-row md:items-center">
         <label class="label cursor-pointer justify-between w-full">
-          <p style="white-space: normal !important;">
+          <p style="white-space: normal !important">
             <span class="label-text font-medium word-break">Optimize images</span>
             <span class="label-text-alt opacity-70 word-break">Reduce size (webp format)</span>
           </p>
@@ -55,6 +55,23 @@
       <p
         id="status"
         class="text-center text-sm text-info"></p>
+
+      <!-- Progress Section -->
+      <div
+        id="progressContainer"
+        class="hidden space-y-2">
+        <div class="flex justify-between text-xs opacity-70">
+          <span id="progressText">0 B / 0 B</span>
+          <span id="progressPercent">0%</span>
+        </div>
+
+        <progress
+          id="progressBar"
+          class="progress progress-primary w-full"
+          value="0"
+          max="100"></progress>
+      </div>
+      
     </div>
 
     <script

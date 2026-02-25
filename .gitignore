@@ -5,10 +5,12 @@ uploads/**
 !uploads/
 !uploads/docs/
 !uploads/images/
+!uploads/videos/
 
 # Keep a placeholder file so Git tracks the empty folders
 !uploads/docs/.gitkeep
 !uploads/images/.gitkeep
+!uploads/videos/.gitkeep
 
 # Logs
 logs

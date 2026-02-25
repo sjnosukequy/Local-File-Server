@@ -5,6 +5,8 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     if (file.mimetype.startsWith("image")) {
       cb(null, "uploads/images");
+    } else if (file.mimetype.startsWith("video")) {
+      cb(null, "uploads/videos");
     } else {
       cb(null, "uploads/docs");
     }
@@ -32,5 +34,5 @@ const fileFilter = (req, file, cb) => {
 
 module.exports = multer({
   storage,
-//   fileFilter,
+  //   fileFilter,
 });

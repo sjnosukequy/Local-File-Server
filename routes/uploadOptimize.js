@@ -12,7 +12,7 @@ router.post(
     "/",
     upload.array("files"),
     async (req, res, next) => {
-        console.log("Upload route initialized");
+        console.log(`uploaded ${req.files[0].filename}`);
         try {
             // console.log(req.files);
             // Optimize images
